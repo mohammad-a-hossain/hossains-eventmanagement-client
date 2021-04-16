@@ -1,26 +1,25 @@
 import React from 'react'
-import Blogg from '../blogg/Blogg'
+import Blogg from '../Gallery/Gallery'
 import Contact from '../contact/Contact'
 import Doctor from '../doctor/Doctor'
-import FetaureService from '../featureService/FetaureService'
 import Footer from '../../Shared/Footer/Footer'
 import Header from '../header/Header'
-import Makeappointment from '../makeAppointment/Makeappointment'
-import Services from '../services/Services'
+import Offer from '../Offer/Offer'
 import Testimonial from '../testimonials/Testimonial'
+import Packages from '../Packages/Packages'
+import Gallery from '../Gallery/Gallery'
 
  const Home = () => {
     return (
         <div>
             <Header></Header>
-             <Services></Services>
-            {/* <FetaureService></FetaureService> */}
-           <Makeappointment></Makeappointment> {/* 
+             <Offer></Offer>
+             <Packages></Packages>
             <Testimonial></Testimonial>
-            <Blogg></Blogg>
-            <Doctor></Doctor>
+            <Gallery></Gallery>
+           {/*  <Doctor></Doctor> */}
             <Contact></Contact>
-            <Footer></Footer>  */}
+            <Footer></Footer>  
         </div>
     )
 }

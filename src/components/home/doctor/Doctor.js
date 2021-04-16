@@ -31,6 +31,7 @@ import DoctorInfo from './DoctorInfo'
         <div>
             <h1>Our Doctors</h1>
             <div className='d-flex container flex-wrap'>
+                <h1>doctor page here</h1>
               {/*   {doctorData.map(doctor =><DoctorInfo doctor={doctor}></DoctorInfo>)} */}
              {/*  {doctors.map(doctor =><DoctorInfo doctor={doctor}></DoctorInfo>)} */}
             </div>

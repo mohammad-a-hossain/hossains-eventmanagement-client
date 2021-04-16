@@ -20,13 +20,34 @@ import React from 'react'
         message:'services we provide services we provide services we provide services we provide services we provide services we provideservices we provideservices we provideservices we provide services we provide services we provide services we provide services we provide services we provide services we '}
      ] */
     return (
-        <div className="container" style={{padding:'100px 0px'}}>
+        <div className="container" style={{padding:'100px 0px',backgroundColor:'yellow'}}>
             <h3 style={{textAlign:'left',paddingBottom:'15px'}}>testimonial</h3>
-            <h1 style={{textAlign:'left',paddingBottom:'50px'}}>what's out patient <br></br> say</h1>
-            <div className='d-flex'>
-                {/*   {
-                      testimonials.map(tinfo =><TestimonialInfo tinfo={tinfo}></TestimonialInfo>)
-                  } */}
+          
+            <div className='d-flex flex-wrap'>
+               <div className='col-md-4'>
+               
+               <h1>testimonial onew</h1>
+               </div>
+               <div className='col-md-4'>
+               
+               <h1>testimonial onew</h1>
+               </div>
+               <div className='col-md-4'>
+               
+               <h1>testimonial onew</h1>
+               </div>
+               <div className='col-md-4'>
+               
+               <h1>testimonial onew</h1>
+               </div>
+               <div className='col-md-4'>
+               
+               <h1>testimonial onew</h1>
+               </div>
+               <div className='col-md-4'>
+               
+               <h1>testimonial onew</h1>
+               </div>
             </div>
         </div>
      
