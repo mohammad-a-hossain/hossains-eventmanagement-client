@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Card, Col, Container, Row } from 'react-bootstrap'
 //import { Badge } from 'react-bootstrap'
 
 //import Servicedetails from '../serviceDetails/Servicedetails'
@@ -20,29 +20,62 @@ import { Col, Container, Row } from 'react-bootstrap'
     ] */
     return (
        
-        <section className='container' style={{backgroundColor:'cadetblue'}}>
+        <section className='container'  style={{backgroundColor:'cadetblue'}}>
           
                <p style={{fontSize:'40px',color:'#3A4256'}}>What we offer </p>
-               <div>
-                <Container>
-                  <Row md={4}>
-                    <Col>
-                    <h2>Weeding ceremony</h2>
-                    </Col>
-                    <Col xs={6}>
-                     <h2>house decoration</h2> 
-                    </Col>
-                    <Col>
-                   <h2>Burri and funaral rituals</h2> 
-                    </Col>
-                    <Col>
-                    <h2>Tourist assist</h2>
-                    </Col>
-                  </Row>
-                </Container>
+          <div className='row container d-flex flex-wrap align-items-center justify-content-center' style={{paddingBottom:'20px'}}>
+              
+            <Card border="success" style={{ width: '15rem',margin:'5px' }}>
+              <Card.Header>Header</Card.Header>
+              <Card.Body>
+                <Card.Title>Success Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the bulk
+                  of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            
+
+            <Card border="danger" style={{ width: '15rem',margin:'5px' }}>
+              <Card.Header>Header</Card.Header>
+              <Card.Body>
+                <Card.Title>Danger Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the bulk
+                  of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            
+
+            <Card border="warning" style={{ width: '15rem',margin:'5px' }}>
+              <Card.Header>Header</Card.Header>
+              <Card.Body>
+                <Card.Title>Warning Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the bulk
+                  of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+
+
+            <Card border="info" style={{ width: '15rem',margin:'5px' }}>
+              <Card.Header>Header</Card.Header>
+              <Card.Body>
+                <Card.Title>Info Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the bulk
+                  of the card's content.
+                </Card.Text>
+              </Card.Body>
+              </Card>
+            </div>
+
  
     
-              </div>
+           
   
                 
                

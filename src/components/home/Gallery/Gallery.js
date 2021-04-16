@@ -24,19 +24,44 @@ import { Image } from 'react-bootstrap'
            title:'we provide services we provide services we provide services'},
      ] */
     return (
-        <div className='container-fluid d-flex' style={{backgroundColor:'red',padding:'10px'}}>
-            <div>
-         <div className=' d-flex'>
-         <Image src={img1} style={{height:'400px',width:'100%'}}></Image>
-         <Image src={img2} style={{height:'400px',width:'100%'}}></Image>
-         <Image src={img1} style={{height:'400px',width:'100%'}}></Image>
+        <div className='container-fluid' style={{backgroundColor:'red',padding:'20px'}}>
+            <div className='row bg-light p-3'><h3>our photos</h3></div>
+          <div className='row container-fluid  d-flex flex-wrap p-2'>
+
+             <div className='col-md-4 col-sm-6 col-xs-12 col-lg-3 mt-2 mb-2'>
+                 <Image thumbnail src={img1} ></Image>
+             </div>
+             <div className='col-md-4 col-sm-6 col-xs-12 col-lg-3 mt-2 mb-2'>
+                 <Image thumbnail src={img2} ></Image>
+             </div>
+        
+            
+             <div className='col-md-4 col-sm-6 col-xs-12 col-lg-3 mt-2 mb-2'>
+                 <Image thumbnail src={img3}></Image>
+             </div>
+           
+             <div className='col-md-4 col-sm-6  col-xs-12 col-lg-3 mt-2 mb-2'>
+                 <Image thumbnail src={img2} ></Image>
+             </div>
+      
+             <div className='col-md-4 col-sm-6 col-xs-12 col-lg-3 mt-2 mb-2'>
+                 <Image thumbnail src={img1} ></Image>
+             </div> 
+             <div className='col-md-4 col-sm-6 col-xs-12 col-lg-3 mt-2 mb-2'>
+                 <Image thumbnail src={img3}></Image>
+             </div>
+             <div className='col-md-4 col-sm-6 col-xs-12 col-lg-3 mt-2 mb-2'>
+                 <Image thumbnail src={img3}></Image>
+             </div>
+             <div className='col-md-4 col-sm-6 col-xs-12 col-lg-3 mt-2 mb-2'>
+                 <Image thumbnail src={img3}></Image>
+             </div>
+      
+      
+         </div> 
          </div>
-      {/*    <div className='d-flex container-fluid'>
-         <Image src={img2} style={{height:'400px',width:'100%'}}></Image>
-         <Image src={img1} style={{height:'800px',width:'100%'}}></Image>
-         </div> */}
-        </div>
-        </div>
+       
+       
     )
 }
 export default Gallery

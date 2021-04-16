@@ -1,8 +1,10 @@
 import React from 'react'
+import { Card } from 'react-bootstrap'
 ////import img1 from '../../../images/Ellipse 1.png'
-//import img2 from '../../../images/Ellipse 2.png'
-//import img3 from '../../../images/Ellipse 3.png'
+import img2 from '../../../images/salsemann2.png'
+import img3 from '../../../images/md.jpg'
 //import TestimonialInfo from './TestimonialInfo'
+import Image from 'react-bootstrap/Image'
 
  const Testimonial = () => {
     /*  const testimonials=[
@@ -21,34 +23,105 @@ import React from 'react'
      ] */
     return (
         <div className="container" style={{padding:'100px 0px',backgroundColor:'yellow'}}>
-            <h3 style={{textAlign:'left',paddingBottom:'15px'}}>testimonial</h3>
+            <h3 style={{textAlign:'left',paddingBottom:'15px'}}>testimonials.....</h3>
           
-            <div className='d-flex flex-wrap'>
-               <div className='col-md-4'>
+            <div className='d-flex flex-wrap justify-content-center align-items-center'>
+             
                
-               <h1>testimonial onew</h1>
+               <div className='col-md-4 border-2'>
+               <Image src={img3} roundedCircle />
+               <h3>name</h3>
+               <p> Some quick example text to build on the card title and make up the bulk of
+               Some quick example text to build on the card title and make up the bulk of
+               Some quick example text to build on the card title and make up the bulk of
+               </p>
                </div>
                <div className='col-md-4'>
-               
-               <h1>testimonial onew</h1>
+               <Image src={img3} roundedCircle />
+               <h3>name</h3>
+               <p> Some quick example text to build on the card title and make up the bulk of
+               Some quick example text to build on the card title and make up the bulk of
+               Some quick example text to build on the card title and make up the bulk of
+               </p>
                </div>
                <div className='col-md-4'>
-               
-               <h1>testimonial onew</h1>
+
+               <Image src={img3} roundedCircle />
+               <h3>name</h3>
+               <p> Some quick example text to build on the card title and make up the bulk of
+               Some quick example text to build on the card title and make up the bulk of
+               Some quick example text to build on the card title and make up the bulk of
+               </p>
                </div>
                <div className='col-md-4'>
-               
-               <h1>testimonial onew</h1>
-               </div>
-               <div className='col-md-4'>
-               
-               <h1>testimonial onew</h1>
-               </div>
-               <div className='col-md-4'>
-               
-               <h1>testimonial onew</h1>
-               </div>
-            </div>
+
+                <Image src={img3} roundedCircle />
+                <h3>name</h3>
+                <p> Some quick example text to build on the card title and make up the bulk of
+                Some quick example text to build on the card title and make up the bulk of
+                Some quick example text to build on the card title and make up the bulk of
+                </p>
+                </div>
+                <div className='col-md-4'>
+
+<Image src={img3} roundedCircle />
+<h3>name</h3>
+<p> Some quick example text to build on the card title and make up the bulk of
+Some quick example text to build on the card title and make up the bulk of
+Some quick example text to build on the card title and make up the bulk of
+</p>
+</div>
+<div className='col-md-4'>
+
+<Image src={img3} roundedCircle />
+<h3>name</h3>
+<p> Some quick example text to build on the card title and make up the bulk of
+Some quick example text to build on the card title and make up the bulk of
+Some quick example text to build on the card title and make up the bulk of
+</p>
+</div>
+             {/*    <Card style={{ width: '18rem',margin:'20px' }}>
+               <Image src={img3} roundedCircle />
+                <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk of
+                    the card's content.
+                    </Card.Text>
+                </Card.Body>
+                </Card>
+                <Card style={{ width: '18rem',margin:'20px' }}>
+               <Image src={img3} roundedCircle />
+                <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk of
+                    the card's content.
+                    </Card.Text>
+                </Card.Body>
+                </Card>
+                <Card style={{ width: '18rem',margin:'20px' }}>
+               <Image src={img2} roundedCircle />
+                <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk of
+                    the card's content.
+                    </Card.Text>
+                </Card.Body>
+                </Card>
+                <Card style={{ width: '18rem',margin:'20px' }}>
+               <Image src={img3} roundedCircle />
+                <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk of
+                    the card's content.
+                    </Card.Text>
+                </Card.Body>
+                </Card> */}
+                </div>
+              
         </div>
      
     )
