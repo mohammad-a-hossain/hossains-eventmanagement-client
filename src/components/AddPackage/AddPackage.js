@@ -43,7 +43,7 @@ import { useForm } from "react-hook-form";
        const containerStyle={
         backgroundColor:'rgb(157,185,270)',height:'100%'
     }
-      
+    
     return (
         <section className='container-fluid row'>
               <div style={containerStyle} className='row container-fluid'>

@@ -1,109 +1,86 @@
 
 import React from 'react'
-//import doctor from '../../../images/5790-removebg.png'
 import './packages.css'
-import { Card,Button } from 'react-bootstrap'
-import img1 from '../../../images/homedeco1.jpg'
-import img2 from '../../../images/tour1.jpg'
-import img3 from '../../../images/wedding2.jpg'
+//import { Card,Button } from 'react-bootstrap'
+// import img1 from '../../../images/flaticon/corporate.png'
+// import img2 from '../../../images/flaticon/festival.png'
+//  import img3 from '../../../images/flaticon/personal.png'
+import PackageInfo from '../PackageInfo/PackageInfo'
+import fakeData from '../fakeData/FakeData'
+
+
 
 const Packages = () => {
-    return (
+
+ const allPackage=[...fakeData]
+  console.log(allPackage)
+
+      return (
         <div className='container-fluid bg-primary p-4' >
              <h2>Our packages</h2>
             <div className='d-flex flex-wrap justify-content-center'>
-               
- <Card style={{ width: '18rem',margin:'20px' }}>
-  <Card.Img variant="top" src={img1} />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Get Package</Button>
-  </Card.Body>
-</Card>
-<Card style={{ width: '18rem',margin:'20px'}}>
-  <Card.Img variant="top" src={img1} />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Get Package</Button>
-  </Card.Body>
-</Card>
-<Card style={{ width: '18rem',margin:'20px' }}>
-  <Card.Img variant="top" src={img1} />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Get Package</Button>
-  </Card.Body>
-</Card>
-<Card style={{ width: '18rem',margin:'20px' }}>
-  <Card.Img variant="top" src={img1} />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Get Package</Button>
-  </Card.Body>
-</Card>
-<Card style={{ width: '18rem',margin:'20px' }}>
-  <Card.Img variant="top" src={img2} />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Get Package</Button>
-  </Card.Body>
-</Card>
-<Card style={{ width: '18rem',margin:'20px' }}>
-  <Card.Img variant="top" src={img3} />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Get Package</Button>
-  </Card.Body>
-</Card>
-<Card style={{ width: '18rem',margin:'20px' }}>
-  <Card.Img variant="top" src={img2} />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Get Package</Button>
-  </Card.Body>
-</Card>
-<Card style={{ width: '18rem',margin:'20px' }}>
-  <Card.Img variant="top" src={img2} />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Get Package</Button>
-  </Card.Body>
-</Card>
-</div>
- 
-</div>
+              {
+                allPackage.map(pakgInfo =><PackageInfo pakgInfo={pakgInfo}  ></PackageInfo>)
+              }
+            </div>
+        </div>
     )
 }
 export default Packages
+
+/* <Card style={{ width: '18rem',margin:'20px' }}>
+ 
+  <Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}} src={img1} />
+  <Card.Body>
+    <Card.Title>Card Title</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Button variant="primary">Get Package</Button>
+  </Card.Body>
+</Card> */
+/* <Card style={{ width: '18rem',margin:'20px'}}>
+<Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}} src={img2} />
+  <Card.Body>
+    <Card.Title>Card Title</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Button variant="primary">Get Package</Button>
+  </Card.Body>
+</Card>
+<Card style={{ width: '18rem',margin:'20px' }}>
+<Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}} src={img3} />
+  <Card.Body>
+    <Card.Title>Card Title</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Button variant="primary">Get Package</Button>
+  </Card.Body>
+</Card>
+<Card style={{ width: '18rem',margin:'20px' }}>
+<Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}} src={img1} />
+  <Card.Body>
+    <Card.Title>Card Title</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Button variant="primary">Get Package</Button>
+  </Card.Body>
+</Card>
+<Card style={{ width: '18rem',margin:'20px' }}>
+<Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}} src={img1} />
+  <Card.Body>
+    <Card.Title>Card Title</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Button variant="primary">Get Package</Button>
+  </Card.Body>
+</Card> */

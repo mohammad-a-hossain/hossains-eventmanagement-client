@@ -13,6 +13,7 @@ import Login from './components/Login/Login';
 import Dashboard from './components/dashboard/Dashboard/Dashboard';
 import AddTestimonial from './components/AddTestimonial/AddTestimonial';
 import AddPackage from './components/AddPackage/AddPackage';
+import Booking from './components/home/Bookings/Booking';
 //import PrivateRoute from './components/Login/privateRoute/PrivateRoute';
 
 //export const UserContext = createContext();
@@ -37,6 +38,9 @@ function App() {
           <Route path="/AddTestimonial">
            <AddTestimonial></AddTestimonial>
           </Route> 
+          <Route path="/Booking/:key">
+            <Booking></Booking>
+            </Route> 
          <Route path='/Login'>
          <Login></Login>
          </Route>

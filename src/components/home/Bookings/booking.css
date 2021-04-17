@@ -1,0 +1,20 @@
+.booking{
+    background-image: url('../../../images/eventimg3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: .8;
+}
+ul{
+margin: 0 auto;
+    height: 500px;
+    width: 400px;
+    border: 1px solid;
+    background-position-y: center; background-color: rgb(194, 238, 176);
+}
+ul.li{  
+    margin:50px 50px;
+    border: 1px solid;
+   
+}

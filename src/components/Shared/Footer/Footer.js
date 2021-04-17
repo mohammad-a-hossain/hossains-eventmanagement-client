@@ -13,14 +13,14 @@ const Footer = () => {
                   <br></br>
                   <h3>HOSSAIN'S <br/> <small>en event management organization</small></h3>
                   <h5>find us on socials </h5>
-                 <ul className='d-flex align-items-lg-center align-items-center'>
+                 <p className='d-flex align-items-lg-center align-items-center'>
                     <li>item icon</li>
                     <li>item icon</li>
                     <li>item icon</li>
                     <li>item icon</li>
                     <li>item icon</li>
 
-                 </ul>
+                 </p>
                
              </div>
              

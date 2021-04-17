@@ -44,7 +44,8 @@ import Image from 'react-bootstrap/Image'
                </div>
                <div className='col-md-4 col-lg-4 col-sx-12 shadow-lg p-3 bg-body rounded'>
 
-               <Image src={img3} style={{width:'100px',height:'100px',marginLeft:'100px'}} roundedCircle />
+               {/* <Image src={img3} style={{width:'100px',height:'100px',marginLeft:'100px'}} roundedCircle /> */}
+               <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
                <h3>name</h3>
                <p> Some quick example text to build on the card title and make up the bulk of
                Some quick example text to build on the card title and make up the bulk of

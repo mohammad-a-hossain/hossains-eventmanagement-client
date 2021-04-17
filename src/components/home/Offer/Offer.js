@@ -1,34 +1,24 @@
-
 import React from 'react'
 import { Card, Col, Container, Row } from 'react-bootstrap'
-//import { Badge } from 'react-bootstrap'
+import provid1 from '../../../images/flaticon/provide1.png'
+import provid2 from '../../../images/flaticon/provide2.png'
+import provid3 from '../../../images/flaticon/provide3.png'
+import provid4 from '../../../images/flaticon/provide4.png'
 
-//import Servicedetails from '../serviceDetails/Servicedetails'
+
 
  const Offer = () => {
-    /* const serviceData=[
-        {name:'Fluoride Treatment',
-        img:img1,
-        describe:'services we provide services we provide services we provide services we provide services we provide services we provideservices we provideservices we provideservices we provide'},
-        {name:'Cavity Filling',
-        img:img2,
-        describe:'services we provide services we provide services we provide services we provide services we provide services we provideservices we provideservices we provideservices we provide'},
-        {name:'Teath Whitening',
-        img:img3,
-        describe:'services we provide services we provide services we provide services we provide services we provide services we provideservices we provideservices we provideservices we provide'}
-
-    ] */
+   
     return (
        
         <section className='container'  style={{backgroundColor:'cadetblue'}}>
           
                <p style={{fontSize:'40px',color:'#3A4256'}}>What we offer </p>
-          <div className='row container d-flex flex-wrap align-items-center justify-content-center' style={{paddingBottom:'20px'}}>
-              
+          <div className='row container d-flex flex-wrap align-items-center justify-content-center' style={{paddingBottom:'20px'}}>  
             <Card border="success" style={{ width: '15rem',margin:'5px' }}>
-              <Card.Header>Header</Card.Header>
+            <Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}} src={provid1} />
               <Card.Body>
-                <Card.Title>Success Card Title</Card.Title>
+                <Card.Title>Corporate service</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the bulk
                   of the card's content.
@@ -37,10 +27,11 @@ import { Card, Col, Container, Row } from 'react-bootstrap'
             </Card>
             
 
-            <Card border="danger" style={{ width: '15rem',margin:'5px' }}>
-              <Card.Header>Header</Card.Header>
+            <Card border="success" style={{ width: '15rem',margin:'5px' }}>
+            <Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}} src={provid2} />
+              
               <Card.Body>
-                <Card.Title>Danger Card Title</Card.Title>
+                <Card.Title>Festival service</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the bulk
                   of the card's content.
@@ -49,10 +40,10 @@ import { Card, Col, Container, Row } from 'react-bootstrap'
             </Card>
             
 
-            <Card border="warning" style={{ width: '15rem',margin:'5px' }}>
-              <Card.Header>Header</Card.Header>
+            <Card border="success" style={{ width: '15rem',margin:'5px' }}>
+            <Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}} src={provid3} />
               <Card.Body>
-                <Card.Title>Warning Card Title</Card.Title>
+                <Card.Title>Personal Function</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the bulk
                   of the card's content.
@@ -60,11 +51,11 @@ import { Card, Col, Container, Row } from 'react-bootstrap'
               </Card.Body>
             </Card>
 
+            <Card border="success" style={{ width: '15rem',margin:'5px' }}>
+            <Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}} src={provid4} />
 
-            <Card border="info" style={{ width: '15rem',margin:'5px' }}>
-              <Card.Header>Header</Card.Header>
               <Card.Body>
-                <Card.Title>Info Card Title</Card.Title>
+                <Card.Title>Home Decoration</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the bulk
                   of the card's content.
