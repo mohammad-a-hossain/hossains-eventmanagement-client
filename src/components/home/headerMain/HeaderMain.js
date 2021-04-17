@@ -7,12 +7,12 @@ import Carousel from 'react-bootstrap/Carousel'
 
  const HeaderMain = () => {
     return (
-        <div style={{height:'500px'}}>
+        <div style={{height:'800px'}} className='row col-lg-12 col-sm-12 col-xs-12'>
         <Carousel>
   <Carousel.Item interval={1000}>
     <img
       className="d-block w-100"
-      style={{height:'500px'}}
+      style={{height:'800px',width:'100%'}}
       src={chair}
       alt="First slide"
     />
@@ -24,7 +24,7 @@ import Carousel from 'react-bootstrap/Carousel'
   <Carousel.Item interval={500}>
     <img
       className="d-block w-100"
-     style={{height:'500px'}}
+     style={{height:'800px',width:'100%'}}
       src={chair2}
       alt="Second slide"
     />
@@ -38,7 +38,7 @@ import Carousel from 'react-bootstrap/Carousel'
       className="d-block w-100"
      /*  src="holder.js/800x400?text=Third slide&bg=20232a" */
      src={chair1}
-     style={{height:'500px'}}
+     style={{height:'800px',width:'100%'}}
     
       alt="Third slide"
     />

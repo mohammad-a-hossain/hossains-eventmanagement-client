@@ -1,0 +1,8 @@
+.login-back{
+  background-image: url('../../images/loginpage.jpg');
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .8;
+  z-index: -1;
+}

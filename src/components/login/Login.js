@@ -2,6 +2,8 @@
 import React from 'react';
  import  firebase from "firebase/app";
  import "firebase/auth";
+ import backImg from '../../images/loginpage.jpg'
+ import './login.css'
 
 //import firebaseConfig from './firebaseConfig'
  //import { useHistory, useLocation } from 'react-router-dom';
@@ -46,11 +48,12 @@ const Login = () => {
 //   }
 
   return (
-    <div className="login-page container">
-      <div className="row align-items-center" style={{ height: "100vh" }}>
-        <div className="col-md-6 shadow p-5">
-          <div className="form-group">
-            <label htmlFor="">User Name</label>
+    <div className="login-page container-fluid login-back" >
+      <div className="row align-items-center justify-content-center" style={{ height: "100vh" }}>
+        <div className="col-md-5  shadow p-5 bg-light">
+      <form>
+           <div className="form-group">
+            <label htmlFor="">User Name here</label>
             <input type="text" className="form-control" />
           </div>
           <div className="form-group">
@@ -60,13 +63,16 @@ const Login = () => {
           <div className="form-group">
             <label htmlFor="" className="text-danger">Forgot your password?</label>
           </div>
+          <button type='submit'>Submit</button>
+          </form>
           <div className="from-group mt-5">
             <button className="btn btn-brand"  >Google Sign in</button>
+            <button className="btn btn-brand"  >FaceBook Sign in</button>
+            <button className="btn btn-brand"  >Twitter Sign in</button>
+            <button className="btn btn-brand"  >Gtihub Sign in</button>
           </div>
-        </div>
-        <div className="col-md-6 d-none d-md-block align-self-end">
-          <img className="img-fluid"  src="" alt="" />
         </div> 
+       
       </div>
     </div>
   );

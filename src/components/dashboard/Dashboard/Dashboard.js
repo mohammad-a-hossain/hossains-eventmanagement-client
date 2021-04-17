@@ -1,10 +1,14 @@
 //import React, { useState ,useEffect, useContext} from 'react'
 import React from 'react'
-import AppointmentsByDate from '../appointmetnByDate/AppointmentsByDate'
 import Sidebar from '../sidebar/Sidebar'
 //import Calendar from 'react-calendar';
 //import 'react-calendar/dist/Calendar.css';//
 //import { UserContext } from '../../../App';
+import Badge from 'react-bootstrap/Badge'
+import backImg from '.././../../images/eventimg2.jpg'
+
+import Button from 'react-bootstrap/Button'
+import { Image } from 'react-bootstrap'
 
     const containerStyle={
         backgroundColor:'rgb(157,185,270)',height:'100%'
@@ -31,15 +35,32 @@ import Sidebar from '../sidebar/Sidebar'
     }, [selectedDate])
      */
     return (
-       <section>
+       <section >
            <div style={containerStyle} className='row container-fluid'>
-               <div className='col-md-2'>
+               
+               <div className='col-md-4'>
                 <Sidebar></Sidebar>
                </div>
-               <div className='col-md-5'>
-          </div>
-               <div className='col-md-5'>
-                <AppointmentsByDate></AppointmentsByDate>
+               <div className='col-md-8 backPick'>
+              <div className='container justify-content-start p-5'>
+              <Button variant="success"  size="lg" style={{margin:'10px'}}>
+                    order pending <Badge variant="light">9</Badge>
+                <span className="sr-only">unread messages</span>
+                </Button>
+                <Button variant="info"  size="lg" style={{margin:'10px'}}>
+                order done <Badge variant="light">9</Badge>
+                <span className="sr-only">unread messages</span>
+                </Button>
+                <Button variant="primary"  size="lg" style={{margin:'10px'}}>
+               orders delivers <Badge variant="light">9</Badge>
+                <span className="sr-only">unread messages</span>
+                </Button>
+                <Button variant="primary"  size="lg" style={{margin:'10px'}}>
+               orders un-delives <Badge variant="light">9</Badge>
+                <span className="sr-only">unread messages</span>
+                </Button>
+              </div>
+         {/*      <Image src={backImg} alt="image"/> */}
                </div>
            </div>
        </section>

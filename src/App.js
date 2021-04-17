@@ -9,11 +9,10 @@ import {
 //import React, { createContext, useState } from 'react';
 
 import Home from './components/home/home/Home';
-import Appointment from './components/Appointment/Appointment/Appointment';
 import Login from './components/Login/Login';
 import Dashboard from './components/dashboard/Dashboard/Dashboard';
-import AllPatients from './components/allPatients/Allpatients/Allpatients';
-import AddDoctor from './components/addDoctor/AddDoctor';
+import AddTestimonial from './components/AddTestimonial/AddTestimonial';
+import AddPackage from './components/AddPackage/AddPackage';
 //import PrivateRoute from './components/Login/privateRoute/PrivateRoute';
 
 //export const UserContext = createContext();
@@ -26,18 +25,18 @@ function App() {
          <Route exact path='/'>
          <Home></Home>
          </Route>
-         <Route path='/appointment'>
-         <Appointment></Appointment>
-         </Route>
-          <Route path="/addDoctor">
-            <AddDoctor></AddDoctor>
+       {/*   <Route path='/appointment'>
+        <AllPackege></AllPackege>
+         </Route> */}
+          <Route path="/addPackage">
+           <AddPackage></AddPackage>
           </Route> 
          <Route path='/dashboard'>
          <Dashboard></Dashboard>
          </Route>
-         <Route path="/dashboard/allPatients">
-            <AllPatients></AllPatients>
-          </Route>
+          <Route path="/AddTestimonial">
+           <AddTestimonial></AddTestimonial>
+          </Route> 
          <Route path='/Login'>
          <Login></Login>
          </Route>
