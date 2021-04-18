@@ -5,7 +5,7 @@ export const ShowAllPackeges = ({packages}) => {
         <div className='p-5'>
 
         <h1>All packages</h1>
-        <table className="table table-borderless">
+        <table className="table table-borderless ">
         <thead>
             <tr>
             <th className="text-secondary text-left" scope="col">Sr No</th>
@@ -28,10 +28,12 @@ export const ShowAllPackeges = ({packages}) => {
                     <td>{packaege.title}</td>
                     <td>{packaege.description}</td>
                     <td>{packaege.duration}</td>
-                    <td>{packaege.type}KG</td>
+                    <td>{packaege.packageType}</td>
                     <td>{packages.date}</td>
                     <td>{packaege.price}</td>
-                    <td>{packaege.icon}</td>
+                    <td>
+                    {<img src={`data:image/png;base64,${packaege.image.img}`} alt='' style={{width:'50px',height:'50px'}} />}
+                    </td>
                     <td>
                         <button>edit</button><button>delete</button>
                     </td>
