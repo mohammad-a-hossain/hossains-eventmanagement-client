@@ -1,11 +1,12 @@
 import React from 'react'
-
+/* import Table from 'react-bootstrap/Table' */
 export const ShowAllPackeges = ({packages}) => {
     return (
-        <div className='p-5'>
+        <div className='container-fluid pY-5'>
 
         <h1>All packages</h1>
-        <table className="table table-borderless ">
+        
+         <table className="table table-borderless">
         <thead>
             <tr>
             <th className="text-secondary text-left" scope="col">Sr No</th>

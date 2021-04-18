@@ -21,12 +21,12 @@ const AllPackeges = () => {
 
     return (
       <section className='container-fluid'>
-              <div style={containerStyle} className='row container-fluid'>
+              <div style={containerStyle} className='row container-fluid d-flex justify-content-lg-center'>
                
-               <div className='col-md-4'>
+               {/* <div className='col-md-4'> */}
               <Sidebar></Sidebar>
-               </div>
-               <div className='col-md-8'>
+              {/*  </div> */}
+               <div className='col-md-10'>
                  <ShowAllPackeges packages={packages}></ShowAllPackeges>
                </div>
            
