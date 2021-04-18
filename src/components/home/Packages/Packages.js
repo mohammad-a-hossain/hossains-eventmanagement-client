@@ -6,21 +6,30 @@ import './packages.css'
 // import img2 from '../../../images/flaticon/festival.png'
 //  import img3 from '../../../images/flaticon/personal.png'
 import PackageInfo from '../PackageInfo/PackageInfo'
-import fakeData from '../fakeData/FakeData'
+
+import { useState,useEffect } from "react";
 
 
 
 const Packages = () => {
-
+  const [packages, setPackages] = useState([])
+    useEffect( () => {
+        fetch('http://localhost:7200/packages')
+        .then(res => res.json())
+        .then(data => setPackages(data))
+    }, [])
+   // console.log(testimonial)
+   
+/* 
  const allPackage=[...fakeData]
-  console.log(allPackage)
+  console.log(allPackage) */
 
       return (
         <div className='container-fluid bg-primary p-4' >
              <h2>Our packages</h2>
             <div className='d-flex flex-wrap justify-content-center'>
               {
-                allPackage.map(pakgInfo =><PackageInfo pakgInfo={pakgInfo}  ></PackageInfo>)
+                packages.map(packages =><PackageInfo packages={packages}  ></PackageInfo>)
               }
             </div>
         </div>

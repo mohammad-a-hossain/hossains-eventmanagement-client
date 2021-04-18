@@ -9,7 +9,7 @@ import logo from '../../../images/logo.png'
  const Navigation = () => {
     return (
       <Navbar collapseOnSelect expand="lg" bg="light" fixed="top"  >
-  <Navbar.Brand href="#home"><Image src={logo} style={{height:'50px',width:'100px'}} thumbnail /> HOSSAIN'S</Navbar.Brand>
+  <Navbar.Brand to="/"><Image src={logo} style={{height:'50px',width:'100px'}} thumbnail /> HOSSAIN'S</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav class="d-flex flex-wrap justify-content-end">

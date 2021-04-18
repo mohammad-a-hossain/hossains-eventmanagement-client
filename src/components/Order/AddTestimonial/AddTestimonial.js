@@ -1,10 +1,45 @@
 import React from 'react'
-import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 
  const AddTestimonial= () => {
-    const { register, handleSubmit, errors } = useForm()
+   /*  const { register, handleSubmit, errors } = useForm() */
+    const [message, setMessage] = useState({})
+    const [file,setFile] =useState(null)
 
+     const handleBlur = e => {
+       const newMessage = { ...message};
+       newMessage[e.target.name] = e.target.value;
+       setMessage(newMessage);
+   }
+
+    const handleFileChange =(e)=>{
+        const newFile =e.target.files[0]
+        setFile(newFile)
+    }
+      const handleSubmit=(e)=>{
+         // e.preventDefault()
+       const formData = new FormData()
+       //console.log(doctorInfo);
+       formData.append('file', file);
+       formData.append('name', message.name);
+       formData.append('message', message.message); 
+     
+
+       fetch('http://localhost:7200/addTestimonial', {
+           method: 'POST',
+           body: formData
+       })
+           .then(response => response.json())
+           .then(data => {
+               console.log(data)
+           })
+           .catch(error => {
+               console.error(error)
+           })
+      }
+    
+/* 
     const onSubmit=data=>{
         data.created = new Date();
       
@@ -21,26 +56,26 @@ import { useForm } from "react-hook-form";
          })
 
         }
-
+ */
     return (
         <section className='container-fluid'>
               <div  className='container-fluid d-flex flex-wrap'>
                   <div className='col-md-4 mt-5'>
                       <h3 className='col-md-4 mt-3'>write a testimonial </h3> 
-                    <form onSubmit={handleSubmit(onSubmit)}className="p-5" >
+                    <form onSubmit={handleSubmit}className="p-5" >
                         <div className="form-group">
-                            <input type="text" ref={register({ required: true })} name="name" placeholder=" Name" className="form-control" />
-                        {errors.name && <span className="text-danger">This field is required</span>}
+                            <input type="text" onBlur={handleBlur} name="name" placeholder=" Name" className="form-control" />
+                      {/*   {errors.name && <span className="text-danger">This field is required</span>} */}
 
                         </div>
                         <div className="form-group">
-                            <textarea type="text" ref={register({ required: true })} name="message" placeholder="message" className="form-control" />
-                        {errors.message &&<span className="text-danger">This field is required</span>}
-
+                            <textarea type="text" onBlur={handleBlur}  name="message" placeholder="message" className="form-control" />
+                    {/*     {errors.message &&<span className="text-danger">This field is required</span>}
+ */}
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleInputPicture">Upload a package Icon</label>
-                            <input type="file" className="form-control" id="exampleInputPassword1" placeholder="Picture" />
+                            <input type="file" onChange={handleFileChange} className="form-control" id="exampleInputPassword1" placeholder="Picture" />
                         </div>
                         <div className="form-group text-left">
                             <button type="submit" className="btn btn-brand">Add</button>
@@ -100,39 +135,4 @@ import { useForm } from "react-hook-form";
 export default  AddTestimonial
 
  
-    //  const [doctorInfo, setDoctorInfo] = useState({})
-    //  const [file,setFile] =useState(null)
- 
-    //   const handleBlur = e => {
-
-    //     const newDrInfo = { ...doctorInfo };
-    //     newDrInfo[e.target.name] = e.target.value;
-    //     setDoctorInfo(newDrInfo);
-    // }
- 
-    //  const handleFileChange =(e)=>{
-    //      const newFile =e.target.files[0]
-    //      setFile(newFile)
-    //  }
-    //    const handleSubmit=(e)=>{
-    //       // e.preventDefault()
-    //     const formData = new FormData()
-    //     //console.log(doctorInfo);
-    //     formData.append('file', file);
-    //     formData.append('name', doctorInfo.name);
-    //     formData.append('email', doctorInfo.email); 
-    //     formData.append('phone', doctorInfo.phone); 
-
-    //     fetch('https://protected-plains-09672.herokuapp.com/addADoctor', {
-    //         method: 'POST',
-    //         body: formData
-    //     })
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             console.log(data)
-    //         })
-    //         .catch(error => {
-    //             console.error(error)
-    //         })
-    //    }
-     
+   

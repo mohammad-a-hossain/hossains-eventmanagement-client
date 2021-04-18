@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap'
 
 import { Link } from 'react-router-dom';
 
- const PackageInfo = ({pakgInfo}) => {
+ const PackageInfo = ({packages}) => {
     // console.log(props)
 
     
@@ -12,14 +12,16 @@ import { Link } from 'react-router-dom';
     return (
         <div>
            <Card style={{ width: '18rem',margin:'20px' }}>
-            <Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}} src={pakgInfo.img} />
+            <Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}}src={`data:image/png;base64,${packages.image.img}`} />
+           {/*  <Image style={{width:'100px',height:'100px',marginLeft:'100px'}} /> */}
+          
             <Card.Body>
-            <Card.Title>{pakgInfo.title}</Card.Title>
+            <Card.Title>{packages.title}</Card.Title>
             <Card.Text>
-               {pakgInfo.description}
+               {packages.description}
             </Card.Text>
             {/* <Button onClick={()=>history.push(`/Booking/${id}`)} variant="primary">Get Package</Button> */}
-            <Link to={"/Booking/"+pakgInfo.key} >Get Booking</Link> 
+            <Link to={"/Booking/"+packages.key} >Get Booking</Link> 
             </Card.Body>
             </Card>
             

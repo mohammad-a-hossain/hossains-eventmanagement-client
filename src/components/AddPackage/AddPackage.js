@@ -1,9 +1,9 @@
 import React from 'react'
 import Sidebar from '../dashboard/sidebar/Sidebar'
-import { useForm } from "react-hook-form";
+import { useState } from "react";
 
  const AddPackage = () => {
-    const { register, handleSubmit, errors } = useForm();
+    /* const { register, handleSubmit, errors } = useForm();
 
     const onSubmit=data=>{
         data.created = new Date();
@@ -19,25 +19,26 @@ import { useForm } from "react-hook-form";
              if(success){
                  alert('one package inserted')
              }
-         })
+         }) */
 
 
-    /*   const formData = new FormData()
+   /*    const formData = new FormData()
       //console.log(doctorInfo);
       formData.append('file', file);
       formData.append('name', doctorInfo.name);
       formData.append('email', doctorInfo.email); 
-      formData.append('phone', doctorInfo.phone);  */
+      formData.append('phone', doctorInfo.phone); 
     
-    }
-/* 
-     const [doctorInfo, setDoctorInfo] = useState({})
+    }  */
+ 
+     const [packages, setPackage] = useState({})
      const [file,setFile] =useState(null)
- */
-  /*    const handleBlur = e => {
-        const newDrInfo = { ...doctorInfo };
-        newDrInfo[e.target.name] = e.target.value;
-        setDoctorInfo(newDrInfo);
+ 
+      const handleBlur = e => {
+        const newPackage = { ...packages};
+        newPackage[e.target.name] = e.target.value;
+        console.log(newPackage)
+        setPackage(newPackage);
     }
  
      const handleFileChange =(e)=>{
@@ -49,9 +50,12 @@ import { useForm } from "react-hook-form";
         const formData = new FormData()
         //console.log(doctorInfo);
         formData.append('file', file);
-        formData.append('name', doctorInfo.name);
-        formData.append('email', doctorInfo.email); 
-        formData.append('phone', doctorInfo.phone); 
+        formData.append('title', packages.title);
+        formData.append('description', packages.description); 
+        formData.append('duration', packages.duration); 
+        formData.append('price', packages.price);
+        formData.append('key', packages.key);  
+        formData.append('packageType', packages.packageType); 
 
         fetch('http://localhost:7200/addPackage', {
             method: 'POST',
@@ -65,7 +69,7 @@ import { useForm } from "react-hook-form";
                 console.error(error)
             })
        }
-     */
+     
        const containerStyle={
         backgroundColor:'rgb(157,185,270)',height:'100%'
     }
@@ -81,50 +85,56 @@ import { useForm } from "react-hook-form";
                <div className='col-md-8'>
                  <h1 className='col-md-5'>Add package </h1> 
 
-                 <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
+                 <form className="p-5"onSubmit={handleSubmit}>
                  <div className="form-group">
                    
-                    <input type="text" ref={register({ required: true })} name="title" placeholder="Package title" className="form-control" />
-                    {errors.title && <span className="text-danger">This field is required</span>}
+                    <input type="text"  onBlur={handleBlur} /* ref={register({ required: true })} */ name="title" placeholder="Package title" className="form-control" />
+                   {/*  {errors.title && <span className="text-danger">This field is required</span>} */}
                 </div>
                 <div className="form-group">
 
-                <input type="text" ref={register({ required: true })} name="description" placeholder="package description" className="form-control" />
-              {errors.description &&<span className="text-danger">This field is required</span>}
+                <input type="text" onBlur={handleBlur} /* ref={register({ required: true })} */ name="description" placeholder="package description" className="form-control" />
+            {/*   {errors.description &&<span className="text-danger">This field is required</span>} */}
 
                 </div>
                     <div className="form-group">
 
-                        <input type="text" ref={register({ required: true })} name="duration" placeholder="package duration" className="form-control" />
-                      {errors.duration && <span className="text-danger">This field is required</span>}
+                        <input type="text" onBlur={handleBlur} /* ref={register({ required: true })} */ name="duration" placeholder="package duration" className="form-control" />
+                     {/*  {errors.duration && <span className="text-danger">This field is required</span>} */}
 
                     </div>
                   
 
                     <div className="form-group">
                    
-                        <input type="number" ref={register({ required: true })} name="price" placeholder="Package price"className="form-control" />
-                      {errors.price && <span className="text-danger">This field is required</span>}
+                        <input type="number" onBlur={handleBlur} /* ref={register({ required: true })} */ name="price" placeholder="Package price"className="form-control" />
+                     {/*  {errors.price && <span className="text-danger">This field is required</span>} */}
                     </div>
                     <div className="form-group row">
                     
                         <div className="col-4">
                         <label htmlFor="exampleInputName">Package Type</label>
-                            <select className="form-control" name="packageType" ref={register({ required: true })} >
+                            <select className="form-control" name="packageType"onBlur={handleBlur} /* ref={register({ required: true })} */ >
                                 <option disabled={true} value="Not set">Select package Type</option>
                                 <option value="personal">Parsonal</option>
                                 <option value="corporate">Corporate</option>
                                 <option value="festival">Festival</option>
                             </select>
-                        {errors.packageType && <span className="text-danger">This field is required</span>}
+                      {/*   {errors.packageType && <span className="text-danger">This field is required</span>} */}
 
                         </div>
                  
                         <div className="form-group">
                     
                             <label htmlFor="exampleInputPicture">Upload a package Icon</label>
-                            <input type="file" className="form-control" id="exampleInputPassword1" placeholder="Picture" />
+                            <input type="file" onChange={handleFileChange} className="form-control" id="exampleInputPassword1" placeholder="Picture" />
                         </div>
+                    </div>
+                    
+                    <div className="form-group">
+                   
+                        <input type="text" onBlur={handleBlur} /* ref={register({ required: true })} */ name="key" placeholder="generate a unique key number + text"className="form-control" />
+                     {/*  {errors.price && <span className="text-danger">This field is required</span>} */}
                     </div>
 
                     <div className="form-group text-left">
