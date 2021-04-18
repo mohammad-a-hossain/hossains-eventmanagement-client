@@ -4,6 +4,32 @@ import { useForm } from "react-hook-form";
 
  const AddPackage = () => {
     const { register, handleSubmit, errors } = useForm();
+
+    const onSubmit=data=>{
+        data.created = new Date();
+       
+      
+         fetch('http://localhost:7200/addPackage',{
+             method:'POST',
+             headers:{'content-type':'application/json'},
+             body:JSON.stringify(data)
+         })
+         .then(res =>res.json())
+         .then(success =>{
+             if(success){
+                 alert('one package inserted')
+             }
+         })
+
+
+    /*   const formData = new FormData()
+      //console.log(doctorInfo);
+      formData.append('file', file);
+      formData.append('name', doctorInfo.name);
+      formData.append('email', doctorInfo.email); 
+      formData.append('phone', doctorInfo.phone);  */
+    
+    }
 /* 
      const [doctorInfo, setDoctorInfo] = useState({})
      const [file,setFile] =useState(null)
@@ -27,7 +53,7 @@ import { useForm } from "react-hook-form";
         formData.append('email', doctorInfo.email); 
         formData.append('phone', doctorInfo.phone); 
 
-        fetch('https://protected-plains-09672.herokuapp.com/addADoctor', {
+        fetch('http://localhost:7200/addPackage', {
             method: 'POST',
             body: formData
         })
@@ -54,22 +80,23 @@ import { useForm } from "react-hook-form";
             
                <div className='col-md-8'>
                  <h1 className='col-md-5'>Add package </h1> 
-                 <form className="p-5" >
+
+                 <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
                  <div className="form-group">
                    
-                    <input type="text" ref={register({ required: true })} name="packageTitle" placeholder="Package title" className="form-control" />
-                    <span className="text-danger">This field is required</span>
+                    <input type="text" ref={register({ required: true })} name="title" placeholder="Package title" className="form-control" />
+                    {errors.title && <span className="text-danger">This field is required</span>}
                 </div>
                 <div className="form-group">
 
                 <input type="text" ref={register({ required: true })} name="description" placeholder="package description" className="form-control" />
-                <span className="text-danger">This field is required</span>
+              {errors.description &&<span className="text-danger">This field is required</span>}
 
                 </div>
                     <div className="form-group">
 
                         <input type="text" ref={register({ required: true })} name="duration" placeholder="package duration" className="form-control" />
-                       <span className="text-danger">This field is required</span>
+                      {errors.duration && <span className="text-danger">This field is required</span>}
 
                     </div>
                   
@@ -77,19 +104,19 @@ import { useForm } from "react-hook-form";
                     <div className="form-group">
                    
                         <input type="number" ref={register({ required: true })} name="price" placeholder="Package price"className="form-control" />
-                       <span className="text-danger">This field is required</span>
+                      {errors.price && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group row">
                     
                         <div className="col-4">
                         <label htmlFor="exampleInputName">Package Type</label>
-                            <select className="form-control" name="gender" ref={register({ required: true })} >
+                            <select className="form-control" name="packageType" ref={register({ required: true })} >
                                 <option disabled={true} value="Not set">Select package Type</option>
                                 <option value="personal">Parsonal</option>
                                 <option value="corporate">Corporate</option>
                                 <option value="festival">Festival</option>
                             </select>
-                           <span className="text-danger">This field is required</span>
+                        {errors.packageType && <span className="text-danger">This field is required</span>}
 
                         </div>
                  

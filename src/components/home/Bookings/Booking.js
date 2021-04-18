@@ -20,7 +20,9 @@ import { Link } from 'react-router-dom'
         <div className='container-fluid d-flex justify-content-center booking p-5 py-5' style={{height:'800px'}}>
             <div className='col-md-3'></div>
           <div className='col-md-6 '>
+              
               <ul className='ulback'>
+              <h2 style={{color:'red'}}>Booking details...</h2>
               <li><b>Package Title:</b> <br></br>  {title}</li>
               <li><b>Package- description:</b>
                   <br></br> {description}</li>

@@ -1,6 +1,11 @@
 import React from 'react'
 import logo from '../../../images/logo.png'
 import Image from 'react-bootstrap/Image'
+import faceBook from '../../../images/socialIcon/facebook.png'
+import twitter from '../../../images/socialIcon/twitter.png'
+import instagram from '../../../images/socialIcon/instagram.png'
+import youtube from '../../../images/socialIcon/youtube.png'
+import linkdin from '../../../images/socialIcon/linkedin.png'
 
 const Footer = () => {
     return (
@@ -14,11 +19,12 @@ const Footer = () => {
                   <h3>HOSSAIN'S <br/> <small>en event management organization</small></h3>
                   <h5>find us on socials </h5>
                  <p className='d-flex align-items-lg-center align-items-center'>
-                    <li>item icon</li>
-                    <li>item icon</li>
-                    <li>item icon</li>
-                    <li>item icon</li>
-                    <li>item icon</li>
+                    <i><Image style={{width:'40px',height:'40px',marginRight:'10px'}} src={faceBook}/></i>
+                    <i><Image style={{width:'40px',height:'40px',marginRight:'10px'}} src={twitter}/></i>
+                    <i><Image style={{width:'40px',height:'40px',marginRight:'10px'}} src={instagram}/></i>
+                    <i><Image style={{width:'40px',height:'40px',marginRight:'10px'}} src={youtube}/></i>
+                    <i><Image style={{width:'40px',height:'40px',marginRight:'10px'}}  src={linkdin}/></i>
+                  
 
                  </p>
                

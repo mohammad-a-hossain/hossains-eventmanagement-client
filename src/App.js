@@ -11,9 +11,14 @@ import {
 import Home from './components/home/home/Home';
 import Login from './components/Login/Login';
 import Dashboard from './components/dashboard/Dashboard/Dashboard';
-import AddTestimonial from './components/AddTestimonial/AddTestimonial';
+import AddTestimonial from './components/Order/AddTestimonial/AddTestimonial';
 import AddPackage from './components/AddPackage/AddPackage';
 import Booking from './components/home/Bookings/Booking';
+import AllPackeges from './components/dashboard/allPackage/AllPackage/AllPackeges';
+import ShowTestamonials from './components/dashboard/Showtestamonial/ShowTestamonials';
+import Order from './components/Order/orders/Order'
+
+
 //import PrivateRoute from './components/Login/privateRoute/PrivateRoute';
 
 //export const UserContext = createContext();
@@ -26,9 +31,15 @@ function App() {
          <Route exact path='/'>
          <Home></Home>
          </Route>
-       {/*   <Route path='/appointment'>
-        <AllPackege></AllPackege>
-         </Route> */}
+         <Route path='/Order'>
+          <Order></Order>
+         </Route>
+          <Route path='/dashboard/allPackage'>
+          <AllPackeges></AllPackeges>
+         </Route> 
+         <Route path='/dashboard/Dashboard/Showtestamonial'>
+          <ShowTestamonials></ShowTestamonials>
+         </Route> 
           <Route path="/addPackage">
            <AddPackage></AddPackage>
           </Route> 

@@ -15,7 +15,7 @@ import logo from '../../../images/logo.png'
     <Nav class="d-flex flex-wrap justify-content-end">
     <Link class="nav-link ms-5" href="##">About Us</Link>
       <Link class="nav-link ms-5" href="##">Gallery</Link>
-      <Link class="nav-link ms-5" to="/##">Orders</Link>
+      <Link class="nav-link ms-5" to="/Order/orders">Orders</Link>
 
       <Link class="nav-link ms-5" to="/dashboard/Dashboard">Dashboard</Link>
       <Link class="nav-link ms-5" to="/Admin">Admin</Link>

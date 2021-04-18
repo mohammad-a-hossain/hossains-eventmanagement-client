@@ -33,7 +33,7 @@ const Sidebar = () => {
                 </li>
           {/*   {isDoctor &&  */}<div>
                     <li>
-                        <Link to="/allPatients/Allpatients/Allpatients" className="text-white">
+                        <Link to="/dashboard/allPackage/AllPackeges" className="text-white">
                             <FontAwesomeIcon icon={faPeopleCarry} /> <span>Show packages</span>
                         </Link>
                     </li>
@@ -42,9 +42,14 @@ const Sidebar = () => {
                             <FontAwesomeIcon icon={faTasks} /> <span>Add Packages</span>
                         </Link>
                     </li>
-                    <li>
+                {/*     <li>
                         <Link to="/addTestimonial/AddTestiMonial" className="text-white">
                              <FontAwesomeIcon icon={faCommentAlt} /> <span>Add Testimonials</span>
+                        </Link>
+                    </li> */}
+                    <li>
+                        <Link to="/dashboard/Dashboard/Showtestamonial" className="text-white">
+                             <FontAwesomeIcon icon={faCommentAlt} /> <span>Show Testimonials</span>
                         </Link>
                     </li>
                     <li>

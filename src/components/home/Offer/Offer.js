@@ -13,7 +13,7 @@ import provid4 from '../../../images/flaticon/provide4.png'
        
         <section className='container'  style={{backgroundColor:'cadetblue'}}>
           
-               <p style={{fontSize:'40px',color:'#3A4256'}}>What we offer </p>
+               <p style={{fontSize:'30px',color:'#3A4256'}}>What we offer </p>
           <div className='row container d-flex flex-wrap align-items-center justify-content-center' style={{paddingBottom:'20px'}}>  
             <Card border="success" style={{ width: '15rem',margin:'5px' }}>
             <Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}} src={provid1} />
