@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from "react";
 
 
- const AddTestimonial= () => {
+ const AddTestimonial= ({orders}) => {
    /*  const { register, handleSubmit, errors } = useForm() */
     const [message, setMessage] = useState({})
     const [file,setFile] =useState(null)
@@ -39,24 +39,6 @@ import { useState } from "react";
            })
       }
     
-/* 
-    const onSubmit=data=>{
-        data.created = new Date();
-      
-         fetch('http://localhost:7200/addTestimonial',{
-             method:'POST',
-             headers:{'content-type':'application/json'},
-             body:JSON.stringify(data)
-         })
-         .then(res =>res.json())
-         .then(success =>{
-             if(success){
-                 alert('one testimonial added')
-             }
-         })
-
-        }
- */
     return (
         <section className='container-fluid'>
               <div  className='container-fluid d-flex flex-wrap'>
@@ -69,7 +51,7 @@ import { useState } from "react";
 
                         </div>
                         <div className="form-group">
-                            <textarea type="text" onBlur={handleBlur}  name="message" placeholder="message" className="form-control" />
+                            <textarea type="text" onBlur={handleBlur}  name="message" placeholder="message" className="form-control" maxLength='80'/>
                     {/*     {errors.message &&<span className="text-danger">This field is required</span>}
  */}
                         </div>
@@ -94,37 +76,25 @@ import { useState } from "react";
                         <th className="text-secondary" scope="col">duration</th>
                         <th className="text-secondary" scope="col">type</th>
                         <th className="text-secondary" scope="col">price</th>
-                        <th className="text-secondary" scope="col">icon</th>
+                        <th className="text-secondary" scope="col">order date</th>
                         </tr>
                      </thead>
                      <tbody>   
-                        <tr>
-                            <td>title</td>
-                            <td>Search for the keywords to learn more about each warning</td>
-                            <td>Search for the keywords to learn more about each warning</td>
-                            <td>personal</td>
-                            <td>555</td>
-                            <td>image</td>
+                       { orders.map(orders =>
+                       <tr>
+                            <td>{orders.packageName}</td>
+                            <td>{orders.description}</td>
+                            <td>{orders.duration}</td>
+                            <td>{orders.packageType}</td>
+                            <td>{orders.packagePrice}</td>
+                            <td>{orders.date}</td>
                         </tr>
-                        <tr>
-                            <td>title</td>
-                            <td>Search for the keywords to learn more about each warning</td>
-                            <td>Search for the keywords to learn more about each warning</td>
-                            <td>personal</td>
-                            <td>555</td>
-                            <td>image</td> 
-                        </tr>
-                        <tr>
-                            <td>title</td>
-                            <td>Search for the keywords to learn more about each warning</td>
-                            <td>Search for the keywords to learn more about each warning</td>
-                            <td>personal</td>
-                            <td>555</td>
-                            <td>image</td>
-                        </tr>
+                        )
+                        }
+                   
                      </tbody>
                     </table>
-      
+                     <button onClick=''>process order</button>
                 </div>
            </div>
           

@@ -4,11 +4,7 @@ import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
  const PackageInfo = ({packages}) => {
-    // console.log(props)
-
-    
- 
-    // console.log(pakgInfo)
+   
     return (
         <div>
            <Card style={{ width: '18rem',margin:'20px' }}>

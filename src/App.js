@@ -17,6 +17,7 @@ import Booking from './components/home/Bookings/Booking';
 import AllPackeges from './components/dashboard/allPackage/AllPackage/AllPackeges';
 import ShowTestamonials from './components/dashboard/Showtestamonial/ShowTestamonials';
 import Order from './components/Order/orders/Order'
+import Shipment from './components/Shipment/Shipment';
 
 
 //import PrivateRoute from './components/Login/privateRoute/PrivateRoute';
@@ -51,6 +52,9 @@ function App() {
           </Route> 
           <Route path="/Booking/:key">
             <Booking></Booking>
+            </Route> 
+            <Route path="/shipment">
+            <Shipment></Shipment>
             </Route> 
          <Route path='/Login'>
          <Login></Login>

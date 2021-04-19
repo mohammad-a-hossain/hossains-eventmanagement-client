@@ -93,7 +93,7 @@ import { useState } from "react";
                 </div>
                 <div className="form-group">
 
-                <input type="text" onBlur={handleBlur} /* ref={register({ required: true })} */ name="description" placeholder="package description" className="form-control" />
+                <input type="text" onBlur={handleBlur} /* ref={register({ required: true })} */ name="description" placeholder="package description" className="form-control" maxLength="100" />
             {/*   {errors.description &&<span className="text-danger">This field is required</span>} */}
 
                 </div>
