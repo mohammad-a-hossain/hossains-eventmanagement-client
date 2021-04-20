@@ -3,33 +3,7 @@ import Sidebar from '../dashboard/sidebar/Sidebar'
 import { useState } from "react";
 
  const AddPackage = () => {
-    /* const { register, handleSubmit, errors } = useForm();
-
-    const onSubmit=data=>{
-        data.created = new Date();
-       
-      
-         fetch('http://localhost:7200/addPackage',{
-             method:'POST',
-             headers:{'content-type':'application/json'},
-             body:JSON.stringify(data)
-         })
-         .then(res =>res.json())
-         .then(success =>{
-             if(success){
-                 alert('one package inserted')
-             }
-         }) */
-
-
-   /*    const formData = new FormData()
-      //console.log(doctorInfo);
-      formData.append('file', file);
-      formData.append('name', doctorInfo.name);
-      formData.append('email', doctorInfo.email); 
-      formData.append('phone', doctorInfo.phone); 
-    
-    }  */
+  
  
      const [packages, setPackage] = useState({})
      const [file,setFile] =useState(null)
@@ -56,6 +30,7 @@ import { useState } from "react";
         formData.append('price', packages.price);
         formData.append('key', packages.key);  
         formData.append('packageType', packages.packageType); 
+        
 
         fetch('https://pacific-falls-55276.herokuapp.com/addPackage', {
             method: 'POST',
@@ -138,7 +113,7 @@ import { useState } from "react";
                     </div>
 
                     <div className="form-group text-left">
-                        <button type="submit" className="btn btn-brand">Add Package</button>
+                        <button type="submit" className="btn btn-primary">Add Package</button>
                     </div>
                 </form>
                
@@ -151,36 +126,3 @@ import { useState } from "react";
     )
 }
 export default AddPackage 
-/* <form className='col-md-5'>
-                    
-<div className="form-group">
-    <label htmlFor="exampleInputName">Package Title</label>
-    <input  type="text" className="form-control" name="name" placeholder="Package title" />
-</div>
-<div className="form-group">
-    <label htmlFor="exampleInputDuration">Package duration</label>
-    <input  type="text" className="form-control" name="duration" placeholder="package description" />
-</div>
-  
-<div className="form-group">
-    <label htmlFor="exampleInputDescription">Package descriptions</label>
-    <input  type="text" className="form-control" name="name" placeholder="description" />
-</div>
-<div className="form-group">
-    <label htmlFor="exampleInputArrangement">Package Arrangement Type</label>
-    <input  type="text" className="form-control" name="arrangement" placeholder="package Arrangement type" />
-</div>
-<div className="form-group">
-    <label htmlFor="exampleInputPrice">Package Price</label>
-    <input type="number" className="form-control" name="price" placeholder="Package price" />
-</div>
-<div className="form-group">
-    <label htmlFor="exampleInputPicture">Upload a package Icon</label>
-    <input type="file" className="form-control" id="exampleInputPassword1" placeholder="Picture" />
-</div>
-<button type="submit" className="btn btn-primary">Submit</button>
-
-</form> */
-
-
-          
