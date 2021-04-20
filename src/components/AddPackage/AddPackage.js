@@ -57,7 +57,7 @@ import { useState } from "react";
         formData.append('key', packages.key);  
         formData.append('packageType', packages.packageType); 
 
-        fetch('http://localhost:7200/addPackage', {
+        fetch('https://pacific-falls-55276.herokuapp.com/addPackage', {
             method: 'POST',
             body: formData
         })

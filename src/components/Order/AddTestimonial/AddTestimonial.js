@@ -27,7 +27,7 @@ import { useState } from "react";
        formData.append('message', message.message); 
      
 
-       fetch('http://localhost:7200/addTestimonial', {
+       fetch('https://pacific-falls-55276.herokuapp.com/addTestimonial', {
            method: 'POST',
            body: formData
        })
