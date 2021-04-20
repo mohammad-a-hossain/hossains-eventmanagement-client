@@ -17,12 +17,12 @@ const ShowTestamonials = () => {
 
     const deleteTestimonial=(id)=> {
         console.log(id)
-          fetch(`http://localhost:7200/testimonial/delete/${id}`,{
+          fetch(`https://pacific-falls-55276.herokuapp.com/delete/${id}`,{
           method:'DELETE' 
       })
       
       .then(() =>{
-      fetch("http://localhost:7200/testimonial")
+      fetch("https://pacific-falls-55276.herokuapp.com/testimonial")
       .then((res) => res.json())
       .then((item) => {
         setTestimonials(item)
