@@ -1,14 +1,15 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import './packageInfo.css'
 
 import { Link } from 'react-router-dom';
 
  const PackageInfo = ({packages}) => {
    
     return (
-        <div>
-           <Card style={{ width: '18rem',margin:'20px' }}>
-            <Card.Img variant="top" style={{width:'100px',height:'100px',margin:'0 auto'}}src={`data:image/png;base64,${packages.image.img}`} />
+        <div className='div-animation img-animation'>
+           <Card style={{ width: '18rem',margin:'20px' }} >
+            <Card.Img variant="top"  style={{width:'100px',height:'100px',margin:'0 auto'}}src={`data:image/png;base64,${packages.image.img}`} />
            {/*  <Image style={{width:'100px',height:'100px',marginLeft:'100px'}} /> */}
           
             <Card.Body>

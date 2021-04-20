@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router'
 import { useState,useEffect } from 'react'
-//import fakeData from '../fakeData/FakeData'
+
 import './booking.css'
 import { Link } from 'react-router-dom'
 
@@ -55,7 +55,7 @@ import { Link } from 'react-router-dom'
               <li><b>Package Type: </b><br></br> {findPackage?.packageType}</li> 
               <li><b>Package -price :</b> <br></br>  $ {findPackage?.price}</li>
               <Link to='/'>Back home</Link> 
-              <button type='submit'  key={findPackage?.key}><Link to='/shipment'>checkout</Link></button>
+              <button type='submit'  key={findPackage?.key}><Link to={"/shipment/"+findPackage?.key} >checkout</Link></button>
               </ul>
            
           </div>

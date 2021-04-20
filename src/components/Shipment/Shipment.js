@@ -1,22 +1,56 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
-import  { useState } from "react";
 import PaymentProcess from '../payment/paymentProcess/PaymentProcess';
+import { useParams } from 'react-router'
+import { useState,useEffect } from 'react'
 
  const Shipment = () => {
+    const {key}= useParams()
+    const [selectPackage, setSelectPackage] = useState([])
+   
+    useEffect(()=>{
+          fetch('http://localhost:7200/packages')
+          .then(res =>res.json())
+          .then(data =>setSelectPackage(data)
+            )
+    },[])
+    const findPackage = selectPackage.find(pkg =>pkg.key === key)
+     
+    const paymentSubmitDataBase=paymentId =>{
+       
+        const orderDetails = {
+          /* ...userLoggedIn, */
+          products:findPackage,
+           shipment:shipmentData, 
+           paymentId,
+           orderTime:new Date()}
+        fetch('http://localhost:7200/addOrder',{
+           method:'POST',
+           headers:{'Content-Type':'application/json'},
+           body:JSON.stringify(orderDetails)
+       })
+        .then(res =>res.json())
+        .then(data =>{
+            if(data){
+               
+                alert('order has placed');
+            }
+        })
+      }
+    
     const { register, handleSubmit, watch, errors } = useForm();
     const [shipmentData,setShipmentData] =useState(null)
              
 
     const onSubmit=data =>{
-        setShipmentData(data)
+        setShipmentData(data,paymentSubmitDataBase)
        }
      
     return (
         <div className='container-fluid'>
             <h1>your shipment details</h1>
             <div className='container'>
-                <div className='col-md-12 d-flex justify-content-lg-center'/* style={{display:shipmentData ?'none':'block'}} */>
+                <div className='col-md-12 d-flex justify-content-lg-center' style={{display:shipmentData ?'none':'block'}}>
             
              <form onSubmit={handleSubmit(onSubmit)} style={{margin:'0 auto'}}>
    
@@ -36,10 +70,10 @@ import PaymentProcess from '../payment/paymentProcess/PaymentProcess';
             </form>
              </div>
               
-                <div className='col-md-5'>
+                <div className='col-md-5' style={{display:shipmentData ?'block':'none'}}>
                     <h2>STRIPE PAYMENT</h2>
-                {/* <ProcessPayments paymentSubmit={paymentSubmitDataBase}></ProcessPayments> */}
-                <PaymentProcess /* paymentSubmit={paymentSubmitDataBase} */ ></PaymentProcess>
+              
+                <PaymentProcess  paymentSubmitDataBase={paymentSubmitDataBase}  ></PaymentProcess>
                 </div>
             </div>
         </div>

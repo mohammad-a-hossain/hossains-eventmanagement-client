@@ -1,0 +1,15 @@
+.div-animation{
+    padding: 0;
+    overflow: hidden;
+}
+.img-animation{
+
+    transition: transform 5s;
+    cursor: pointer;
+  }
+  .img-animation:hover{
+      -ms-transform: scale(1.1); /* IE 9 */
+      -webkit-transform: scale(1.1); /* Safari 3-8 */
+     
+    }
+ 

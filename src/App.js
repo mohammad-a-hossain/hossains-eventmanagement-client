@@ -53,7 +53,7 @@ function App() {
           <Route path="/Booking/:key">
             <Booking></Booking>
             </Route> 
-            <Route path="/shipment">
+            <Route path="/shipment/:key">
             <Shipment></Shipment>
             </Route> 
          <Route path='/Login'>

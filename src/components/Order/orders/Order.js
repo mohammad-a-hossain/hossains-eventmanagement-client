@@ -6,19 +6,21 @@ import { useState,useEffect } from 'react'
 
 
  const Order = () => {
-    const [order, setOrder] = useState([])
+    const [orders, setOrder] = useState([])
    
     useEffect(()=>{
-          fetch('http://localhost:7200/orders')
+          fetch('https://pacific-falls-55276.herokuapp.com/orders')
           .then(res =>res.json())
           .then(data =>setOrder(data)
+
             )
     },[])
+    console.log(orders)
     return (
         <div className='container-fluid'>
            <Navigation></Navigation>
             <div className='container-fluid' style={{backgroundColor:'lightGray'}}>
-           <AddTestimonial orders={order}></AddTestimonial>
+           <AddTestimonial orders={orders}></AddTestimonial>
             </div>
         </div>
     )

@@ -1,8 +1,9 @@
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 
- const CardForm = () => {
+ const CardForm = ({paymentSubmitDataBase}) => {
 
     const stripe = useStripe();
     const elements = useElements();
@@ -27,7 +28,7 @@ import React, { useState } from 'react'
      } else {
        setPaymentSuccess(paymentMethod.id)
        setPaymentError(null)
-       paymentSubmit(paymentMethod.id)
+       paymentSubmitDataBase(paymentMethod.id)
        console.log('[PaymentMethod]', paymentMethod);
      }
   };
@@ -42,6 +43,9 @@ import React, { useState } from 'react'
         Pay
       </button>
     </form>
+    <div>
+      <button><Link to="/home">home</Link></button>
+    </div>
         </div>
     )
 }

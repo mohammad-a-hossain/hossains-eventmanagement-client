@@ -1,12 +1,11 @@
-// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//     apiKey: "AIzaSyAWEfeAbYAXIXHraWjETncDxxU3QV0RKBw",
-//     authDomain: "doctorportal-cfe4b.firebaseapp.com",
-//     projectId: "doctorportal-cfe4b",
-//     storageBucket: "doctorportal-cfe4b.appspot.com",
-//     messagingSenderId: "189312355690",
-//     appId: "1:189312355690:web:266a0c13b2bc8d2feaa913",
-//     measurementId: "G-JSR3L5YVV0"
-//   };
 
-//   export default firebaseConfig
+const firebaseConfig = {
+    apiKey: "AIzaSyCPmUahGdV5GpMAemsgZIfiPsci23pwvAI",
+    authDomain: "hossains-eventmanagement.firebaseapp.com",
+    projectId: "hossains-eventmanagement",
+    storageBucket: "hossains-eventmanagement.appspot.com",
+    messagingSenderId: "785666377851",
+    appId: "1:785666377851:web:1f817efa6200fe0bbcfade",
+    measurementId: "G-KC30CK9P83"
+  };
+  export default firebaseConfig

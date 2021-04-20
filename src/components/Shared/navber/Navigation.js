@@ -13,14 +13,14 @@ import logo from '../../../images/logo.png'
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav class="d-flex flex-wrap justify-content-end">
-    <Link class="nav-link ms-5" href="##">About Us</Link>
-      <Link class="nav-link ms-5" href="##">Gallery</Link>
-      <Link class="nav-link ms-5" to="/Order/orders">Orders</Link>
-      <Link class="nav-link ms-5" to="/dashboard/Dashboard">Dashboard</Link>
-      <Link class="nav-link ms-5" to="/Admin">Admin</Link>
-     <Link class="nav-link ms-5" to="/">Home</Link>
-     <Link class="nav-link ms-5" to="/##">About Us</Link>
+    <Link class="nav-link ms-5 text-dark" to="/">Home</Link>
+    <Link class="nav-link ms-5 text-dark" href="##">About Us</Link>
+      <Link class="nav-link ms-5 text-dark" href="##">Gallery</Link>
+      <Link class="nav-link ms-5 text-dark" to="/Order/orders">Orders</Link>
+      <Link class="nav-link ms-5 text-dark" to="/dashboard/Dashboard">Dashboard</Link>
+      <Link class="nav-link ms-5 text-dark" to="/Login">Contact</Link>
      <Link class="nav-link ms-5" to="/Login">Login</Link>
+     <Link class="nav-link ms-5 text-dark" to="/Login">LogOut</Link>
 
      
     </Nav>

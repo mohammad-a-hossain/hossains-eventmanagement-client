@@ -3,6 +3,7 @@ import { useState } from "react";
 
 
  const AddTestimonial= ({orders}) => {
+     console.log(orders)
    /*  const { register, handleSubmit, errors } = useForm() */
     const [message, setMessage] = useState({})
     const [file,setFile] =useState(null)
@@ -79,15 +80,16 @@ import { useState } from "react";
                         <th className="text-secondary" scope="col">order date</th>
                         </tr>
                      </thead>
-                     <tbody>   
-                       { orders.map(orders =>
+                     <tbody>  
+                     
+                       { orders.map(order =>
                        <tr>
-                            <td>{orders.packageName}</td>
-                            <td>{orders.description}</td>
-                            <td>{orders.duration}</td>
-                            <td>{orders.packageType}</td>
-                            <td>{orders.packagePrice}</td>
-                            <td>{orders.date}</td>
+                            <td>{order.products.title}</td>
+                            <td>{order.products.description}</td>
+                            <td>{order.products.duration}</td>
+                            <td>{order.products.packageType}</td>
+                            <td>{order.products.price}</td>
+                            <td>{order.orderTime}</td>
                         </tr>
                         )
                         }

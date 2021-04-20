@@ -1,18 +1,36 @@
 import React from 'react';
 import Sidebar from '../sidebar/Sidebar';
 import  { useEffect, useState } from 'react';
+import spinner from '../../Shared/spinner/spinner.gif'
 
 const ShowTestamonials = () => {
-    const [testimonial, setTestimonial] = useState([]);
+    const [testimonials, setTestimonials] = useState([]);
 
      useEffect(() => {
-        fetch('http://localhost:7200/testimonial')
+        fetch('https://pacific-falls-55276.herokuapp.com/testimonial')
             .then(res => res.json())
             .then(data =>
                 /* console.log(data) */
-                setTestimonial(data)) 
+                setTestimonials(data)) 
             
     }, [])
+
+    const deleteTestimonial=(id)=> {
+        console.log(id)
+          fetch(`http://localhost:7200/testimonial/delete/${id}`,{
+          method:'DELETE' 
+      })
+      
+      .then(() =>{
+      fetch("http://localhost:7200/testimonial")
+      .then((res) => res.json())
+      .then((item) => {
+        setTestimonials(item)
+       
+        }); 
+      }) 
+      }
+
     const containerStyle={
         backgroundColor:'rgb(157,185,270)',height:'100%'
     }
@@ -28,6 +46,7 @@ const ShowTestamonials = () => {
          <table className="table table-borderless">
             <thead>
                 <tr>
+                <th className="text-secondary" scope="col">sl no</th>
                 <th className="text-secondary" scope="col">Name</th>
                 <th className="text-secondary" scope="col">Message</th>
                 <th className="text-secondary" scope="col">date</th>
@@ -36,13 +55,18 @@ const ShowTestamonials = () => {
             </thead>
             <tbody>
                 {
-                 testimonial.map((testimonial, index) => 
+
+                    testimonials.length ===0 && <img src={spinner} alt="spinner" className="img-fluid"/>
+                }
+                {
+                 testimonials.map((testimonial, index) => 
                         
                     <tr>
+                         <td>{index + 1}</td>
                         <td>{testimonial.name}</td>
                         <td>{testimonial.message}</td>
                         <td>{testimonial.created}</td>
-                         <td><button>delete</button></td>
+                         <td><button onClick={()=>deleteTestimonial(testimonial._id)}>delete</button></td>
                     </tr>
                     )
                 }  
