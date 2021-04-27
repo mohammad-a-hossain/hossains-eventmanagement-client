@@ -3,7 +3,7 @@
 
 an event management company who provide some special type of your events arrangement and service smoothly so that you can feel comfort in your daily life. 
 
-# assignment live site link 
+# assignment live site link https://hossains-eventmanagement.web.app/
 ## features client side
 
 * navigation bar 
