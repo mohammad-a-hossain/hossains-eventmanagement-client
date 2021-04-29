@@ -7,7 +7,7 @@ const ShowTestamonials = () => {
     const [testimonials, setTestimonials] = useState([]);
 
      useEffect(() => {
-        fetch('https://pacific-falls-55276.herokuapp.com/testimonial')
+        fetch('https://protected-forest-47182.herokuapp.com/testimonial')
             .then(res => res.json())
             .then(data =>
                 /* console.log(data) */
@@ -17,12 +17,12 @@ const ShowTestamonials = () => {
 
     const deleteTestimonial=(id)=> {
         console.log(id)
-          fetch(`https://pacific-falls-55276.herokuapp.com/delete/${id}`,{
+          fetch(`https://protected-forest-47182.herokuapp.com/delete/${id}`,{
           method:'DELETE' 
       })
       
       .then(() =>{
-      fetch("https://pacific-falls-55276.herokuapp.com/testimonial")
+      fetch("hthttps://protected-forest-47182.herokuapp.com/testimonial")
       .then((res) => res.json())
       .then((item) => {
         setTestimonials(item)

@@ -17,19 +17,19 @@ import Button from 'react-bootstrap/Button'
     const [orders, setOrder] = useState([])
    
     useEffect(()=>{
-          fetch('https://pacific-falls-55276.herokuapp.com/orders')
+          fetch('https://protected-forest-47182.herokuapp.com/orders')
           .then(res =>res.json())
           .then(data =>setOrder(data)
 
             )
     },[])
     const deleteOrder=(id)=> {
-        fetch(`https://pacific-falls-55276.herokuapp.com/delete/${id}`,{
+        fetch(`https://protected-forest-47182.herokuapp.com/delete/${id}`,{
         method:'DELETE' 
     })
     
     .then(result =>{
-    fetch("https://pacific-falls-55276.herokuapp.com/orders")
+    fetch("https://protected-forest-47182.herokuapp.com/orders")
     .then((res) => res.json())
     .then((products) => {
         setOrder(products)

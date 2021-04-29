@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
     const [selectPackage, setSelectPackage] = useState([])
    
     useEffect(()=>{
-          fetch('http://localhost:7200/packages')
+          fetch('https://protected-forest-47182.herokuapp.com/packages')
           .then(res =>res.json())
           .then(data =>setSelectPackage(data)
             )

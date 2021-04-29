@@ -9,7 +9,7 @@ import {
 //import React, { createContext, useState } from 'react';
 
 import Home from './components/home/home/Home';
-import Login from './components/Login/Login';
+import Login from './components/login/Login';
 import Dashboard from './components/dashboard/Dashboard/Dashboard';
 import AddTestimonial from './components/Order/AddTestimonial/AddTestimonial';
 import AddPackage from './components/AddPackage/AddPackage';

@@ -27,7 +27,7 @@ import { useState } from "react";
        formData.append('message', message.message); 
      
 
-       fetch('https://pacific-falls-55276.herokuapp.com/addTestimonial', {
+       fetch('https://protected-forest-47182.herokuapp.com/addTestimonial', {
            method: 'POST',
            body: formData
        })

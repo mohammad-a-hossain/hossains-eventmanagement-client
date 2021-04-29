@@ -8,7 +8,7 @@ const AllPackeges = () => {
      const [packages, setPackages] = useState([]);
 
      useEffect(() => {
-        fetch('https://pacific-falls-55276.herokuapp.com/packages')
+        fetch('https://protected-forest-47182.herokuapp.com/packages')
             .then(res => res.json())
             .then(data =>
                 /* console.log(data) */
@@ -16,12 +16,12 @@ const AllPackeges = () => {
     }, [])
 
      const deletePackage=(id)=> {
-          fetch(`https://pacific-falls-55276.herokuapp.com/delete/${id}`,{
+          fetch(`https://protected-forest-47182.herokuapp.com/delete/${id}`,{
           method:'DELETE' 
       })
       
       .then(result =>{
-      fetch("https://pacific-falls-55276.herokuapp.com/packages")
+      fetch("https://protected-forest-47182.herokuapp.com/packages")
       .then((res) => res.json())
       .then((products) => {
         setPackages(products)

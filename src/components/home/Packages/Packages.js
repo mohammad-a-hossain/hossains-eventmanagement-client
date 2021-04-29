@@ -11,15 +11,12 @@ import { useState,useEffect } from "react";
 const Packages = () => {
   const [packages, setPackages] = useState([])
     useEffect( () => {
-        fetch('https://pacific-falls-55276.herokuapp.com/packages')
+        fetch('https://protected-forest-47182.herokuapp.com/packages')
         .then(res => res.json())
         .then(data => setPackages(data))
     }, [])
    // console.log(testimonial)
    
-/* 
- const allPackage=[...fakeData]
-  console.log(allPackage) */
 
       return (
         <div className='container-fluid bg-primary p-4' >

@@ -32,7 +32,7 @@ import { useState } from "react";
         formData.append('packageType', packages.packageType); 
         
 
-        fetch('https://pacific-falls-55276.herokuapp.com/addPackage', {
+        fetch('https://protected-forest-47182.herokuapp.com/addPackage', {
             method: 'POST',
             body: formData
         })

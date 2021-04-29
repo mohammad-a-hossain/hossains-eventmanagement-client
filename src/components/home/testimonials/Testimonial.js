@@ -5,7 +5,7 @@ import spinner from '../../Shared/spinner/spinner.gif'
  const Testimonial = () => {
     const [testimonial, setTestimonial] = useState([])
     useEffect( () => {
-        fetch('https://pacific-falls-55276.herokuapp.com/testimonial')
+        fetch('https://protected-forest-47182.herokuapp.com/testimonial')
         .then(res => res.json())
         .then(data => setTestimonial(data))
     }, [])
