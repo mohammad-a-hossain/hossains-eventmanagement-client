@@ -9,7 +9,7 @@ import { useState,useEffect } from 'react'
     const [orders, setOrder] = useState([])
    
     useEffect(()=>{
-          fetch('https://pacific-falls-55276.herokuapp.com/orders')
+          fetch('https://protected-forest-47182.herokuapp.com/orders')
           .then(res =>res.json())
           .then(data =>setOrder(data)
 
